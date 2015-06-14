@@ -551,9 +551,9 @@ class ManageThread extends Thread {
 				} else if(line.contains("login_member>>")){
 					String[] split_line = line.split(">>");
 
-					for(int i = 0; i < split_line.length; i++){
-						System.out.println(i+" index =>"+split_line[i]);
-					}
+//					for(int i = 0; i < split_line.length; i++){
+//						System.out.println(i+" index =>"+split_line[i]);
+//					}
 
 					for(int i = 0; i < Server.userArrList.size(); i++){
 						User user = Server.userArrList.get(i);
@@ -581,9 +581,9 @@ class ManageThread extends Thread {
 				}else if(line.contains("result_pay>>")){
 					String[] split_line = line.split(">>");
 					
-					for(int i = 0; i < split_line.length; i++){
-						System.out.println(i+"index =>"+split_line[i]);
-					}
+//					for(int i = 0; i < split_line.length; i++){
+//						System.out.println(i+"index =>"+split_line[i]);
+//					}
 					for(int i = 0; i < Server.userArrList.size(); i++){
 						if(Server.userArrList.get(i).getId().equals(split_line[3])){
 							Server.userArrList.get(i).addUseAccumulation(Integer.parseInt(split_line[1]));
@@ -594,9 +594,9 @@ class ManageThread extends Thread {
 					}
 				}else if(line.contains("send_com_id>>")){
 					String[] split_line = line.split(">>");
-					for(int i = 0; i < split_line.length; i++){
-						System.out.println(i+"index =>"+split_line[i]);
-					}
+//					for(int i = 0; i < split_line.length; i++){
+//						System.out.println(i+"index =>"+split_line[i]);
+//					}
 					Server.stateTextArea.append(split_line[1]+"번 자리 : "+split_line[3]+"\n");
 					
 				}

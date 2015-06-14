@@ -264,9 +264,9 @@ public class Client {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				String pay = Client.calPay(startTime);
-				pw.println("result_pay>>"+"6000"+">>user_id>>"+Client.getUserId()+">>computer_id>>"+computerId);
+				pw.println("result_pay>>"+pay+">>user_id>>"+Client.getUserId()+">>computer_id>>"+computerId);
 				pw.flush();
-				JOptionPane.showConfirmDialog(null, "이용하신 금액은 "+"6000"+"원 입니다.","요금정산",JOptionPane.CLOSED_OPTION);
+				JOptionPane.showConfirmDialog(null, "이용하신 금액은 "+pay+"원 입니다.","요금정산",JOptionPane.CLOSED_OPTION);
 				loginFrame.dispose();
 			}
 		});
@@ -327,7 +327,7 @@ class ClientThread extends Thread{
 		try {
 			String line = null;
 			while((line = br.readLine()) != null){
-				System.out.println("클라이언트 수신=>"+line);
+//				System.out.println("클라이언트 수신=>"+line);
 				
 				if(line.contains("password_valid>>")){
 					String[] split_line = line.split(">>");
